@@ -3,9 +3,9 @@ import fs from "fs";
 import https from "https";
 
 // ==========================
-// ⚙️ KONFIGURASI
+// KONFIGURASI
 // ==========================
-const BOT_TOKEN = "8382599750:AAG802BNyUxR1C1ZaZOvpM3UArAGuWt3DGg"; // Ganti token BotFather
+const BOT_TOKEN = "MASUKAN_BOT_TOKEN_DISINI"; // Ganti token BotFather
 const DATA_FILE = "./domains.json";
 let data = { domains: [], interval: 60 * 1000, lastChatId: null };
 
@@ -23,7 +23,7 @@ const saveData = () =>
   fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
 
 // ==========================
-// 🌐 CEK DOMAIN VIA Skiddle API
+// CEK DOMAIN
 // ==========================
 async function checkBatch(domains) {
   return new Promise((resolve) => {
@@ -88,7 +88,7 @@ async function checkBatch(domains) {
 }
 
 // ==========================
-// 🔍 CEK DNS GOOGLE
+// CEK DNS GOOGLE
 // ==========================
 async function checkGoogleDNS(domain) {
   return new Promise((resolve) => {
@@ -123,7 +123,7 @@ async function checkGoogleDNS(domain) {
 }
 
 // ==========================
-// 🧩 CEK MASSAL
+// CEK MASSAL
 // ==========================
 async function runCheck(chatId) {
   if (!data.domains.length)
@@ -149,7 +149,7 @@ async function runCheck(chatId) {
 }
 
 // ==========================
-// 🔁 PENJADWALAN
+// PENJADWALAN
 // ==========================
 let job = null;
 function restartJob() {
@@ -160,7 +160,7 @@ function restartJob() {
 restartJob();
 
 // ==========================
-// 💬 HANDLER TELEGRAM
+// HANDLER TELEGRAM
 // ==========================
 bot.onText(/\/start/, (msg) => {
   const text = `👋 *Nawala Checker Bot (BY : @lord_minzzcodex)*\n\nPerintah:\n
