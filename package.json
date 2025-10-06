@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "nawalacheck",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy src/index.ts"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.4.0-pre.7",
+    "hono": "^4.6.15",
+    "node-telegram-bot-api": "^0.66.0",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231218.0",
+    "@eslint/js": "^9.32.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "eslint": "^9.32.0",
+    "globals": "^16.3.0",
+    "typescript-eslint": "^8.39.0",
+    "wrangler": "^4.28.0"
+  }
+}
